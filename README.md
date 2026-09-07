@@ -2,7 +2,7 @@
 
 A repository holding an **NYU upscaling workshop series**. One folder per workshop. Every workshop is a [Slidev](https://sli.dev) presentation that uses the shared NYU theme vendored in this repo at [`theme/`](theme/).
 
-Maintained by **Hadi Zaatiti** and **Sam**.
+Maintained by **Hadi Zaatiti** and **Samuel A. Prieto**.
 
 ---
 
@@ -360,4 +360,4 @@ These files cover everything an agent needs to know to work productively in this
 
 ## License
 
-NYU workshop materials by Hadi Zaatiti and Sam. Ask the maintainers before redistributing.
+NYU workshop materials by Hadi Zaatiti and Samuel A. Prieto. Ask the maintainers before redistributing.

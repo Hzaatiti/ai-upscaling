@@ -145,4 +145,4 @@ layout: end
 
 ::meta::
 Repo: github.com/Hzaatiti/ai-upscaling
-Maintainers: Hadi Zaatiti and Sam
+Maintainers: Hadi Zaatiti and Samuel A. Prieto

@@ -1,6 +1,6 @@
 # Workshop 01, AI-Assisted Presentations with Slidev
 
-From Prompt to Polished Deck. Presented by Hadi Zaatiti and Sam.
+From Prompt to Polished Deck. Presented by Hadi Zaatiti and Samuel A. Prieto.
 
 ## Run locally
 

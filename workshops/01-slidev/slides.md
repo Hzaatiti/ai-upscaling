@@ -10,7 +10,7 @@ info: |
 
   Markdown-driven presentations: install, author, theme, and publish a
   deck end to end using the NYU slidev theme.
-author: Hadi Zaatiti · Sam
+author: Hadi Zaatiti · Samuel A. Prieto
 highlighter: shiki
 lineNumbers: false
 drawings:
@@ -26,9 +26,9 @@ layout: cover
 <span class="nyu-tag nyu-tag--accent">Workshop 01 · From Prompt to Polished Deck</span>
 
 ::meta::
-Hadi Zaatiti · Sam
+Hadi Zaatiti · Samuel A. Prieto
 New York University
-September 2026
+October 2026
 
 <!--
 Welcome people in. Mention the deck they're watching is itself a Slidev deck, so
@@ -122,7 +122,7 @@ layout: default
 The "so this exists, and there is more" slide. The series is shaped directly by the survey:
 this workshop is the #1 requested topic in the #1 preferred format. Upcoming topics map to the
 next-highest demand (research 12, data 11, automation 9, prompting 9). Presentations/Slidev
-is Hadi + Sam. Further out: documentation, privacy, and coding sessions.
+is Hadi + Samuel A. Prieto. Further out: documentation, privacy, and coding sessions.
 -->
 
 ---
@@ -1051,6 +1051,6 @@ layout: end
 
 ::meta::
 
-Questions? Reach out to Hadi Zaatiti or Sam.
+Questions? Reach out to Hadi Zaatiti or Samuel A. Prieto.
 
 Repo &nbsp;·&nbsp; [github.com/Hzaatiti/ai-upscaling](https://github.com/Hzaatiti/ai-upscaling)

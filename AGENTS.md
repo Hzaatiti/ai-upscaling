@@ -8,7 +8,7 @@ Repo URL: `github.com/Hzaatiti/ai-upscaling`.
 
 ## What this repo is
 
-The home of an **NYU upscaling workshop series** maintained by Hadi Zaatiti and Sam. Each workshop is a Slidev deck under `workshops/NN-name/`. The visual identity lives **in this same repo** under `theme/`, packaged as `slidev-theme-nyu` and consumed by every deck through a relative `file:` dependency.
+The home of an **NYU upscaling workshop series** maintained by Hadi Zaatiti and Samuel A. Prieto. Each workshop is a Slidev deck under `workshops/NN-name/`. The visual identity lives **in this same repo** under `theme/`, packaged as `slidev-theme-nyu` and consumed by every deck through a relative `file:` dependency.
 
 This is a **pnpm workspace**. Each workshop is its own package with its own `package.json`. The root `pnpm-workspace.yaml` declares `workshops/*` as workspace packages. The theme is not a workspace package; it is plain folder linked via `file:`.
 
