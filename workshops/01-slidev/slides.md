@@ -10,7 +10,7 @@ info: |
 
   Markdown-driven presentations: install, author, theme, and publish a
   deck end to end using the NYU slidev theme.
-author: Hadi Zaatiti · Samuel A. Prieto
+author: Samuel A. Prieto · Hadi Zaatiti
 highlighter: shiki
 lineNumbers: false
 drawings:
@@ -26,8 +26,10 @@ layout: cover
 <span class="nyu-tag nyu-tag--accent">Workshop 01 · From Prompt to Polished Deck</span>
 
 ::meta::
-Hadi Zaatiti · Samuel A. Prieto
+Samuel A. Prieto · Hadi Zaatiti
+
 New York University
+
 October 2026
 
 <!--
@@ -40,68 +42,16 @@ everything you see is achievable with the tools we'll teach in the next hour.
 layout: default
 ---
 
-# We asked colleagues what they want
+# Part of a workshop series
 
-<p class="cap">What people want to learn, by number of selections (survey, n = 21)</p>
-
-<svg viewBox="0 0 900 320" style="width:100%; max-height:330px; height:auto; display:block;">
-  <text class="lbl-hl" x="0" y="22" dominant-baseline="middle">Presentations &amp; communication</text>
-  <rect class="bar-hl" x="300" y="9" width="540.0" height="26" rx="3"/>
-  <text class="val-hl" x="850.0" y="22" dominant-baseline="middle">13</text>
-  <text class="lbl" x="0" y="66" dominant-baseline="middle">Research workflows</text>
-  <rect class="bar-n" x="300" y="53" width="498.5" height="26" rx="3"/>
-  <text class="val" x="808.5" y="66" dominant-baseline="middle">12</text>
-  <text class="lbl" x="0" y="110" dominant-baseline="middle">Data analysis</text>
-  <rect class="bar-n" x="300" y="97" width="456.9" height="26" rx="3"/>
-  <text class="val" x="766.9" y="110" dominant-baseline="middle">11</text>
-  <text class="lbl" x="0" y="154" dominant-baseline="middle">Automation (n8n, agents)</text>
-  <rect class="bar-n" x="300" y="141" width="373.8" height="26" rx="3"/>
-  <text class="val" x="683.8" y="154" dominant-baseline="middle">9</text>
-  <text class="lbl" x="0" y="198" dominant-baseline="middle">Prompt engineering</text>
-  <rect class="bar-n" x="300" y="185" width="373.8" height="26" rx="3"/>
-  <text class="val" x="683.8" y="198" dominant-baseline="middle">9</text>
-  <text class="lbl" x="0" y="242" dominant-baseline="middle">Coding</text>
-  <rect class="bar-n" x="300" y="229" width="166.2" height="26" rx="3"/>
-  <text class="val" x="476.2" y="242" dominant-baseline="middle">4</text>
-  <text class="lbl" x="0" y="286" dominant-baseline="middle">Local / private AI</text>
-  <rect class="bar-n" x="300" y="273" width="41.5" height="26" rx="3"/>
-  <text class="val" x="351.5" y="286" dominant-baseline="middle">1</text>
-</svg>
-
-<p class="take">AI for presentations and communication came first. The top five topics all scored 9 or more.</p>
-
-<style scoped>
-.cap { color:var(--fg2); font-size:14px; margin:0 0 6px; }
-.take { margin-top:10px; font-family:var(--font-serif); font-size:var(--t-body-lg); color:var(--fg1); }
-.lbl   { fill:var(--fg1); font-family:var(--font-sans); font-size:14px; }
-.lbl-hl{ fill:var(--nyu-violet); font-family:var(--font-sans); font-size:14px; font-weight:700; }
-.val   { fill:var(--fg2); font-family:var(--font-sans); font-size:13px; }
-.val-hl{ fill:var(--nyu-violet); font-family:var(--font-sans); font-size:15px; font-weight:700; }
-.bar-hl{ fill:var(--nyu-violet); }
-.bar-n { fill:var(--violet-300); }
-</style>
-
-<!--
-The "why we are here" slide. n = 21 responses. Context to say aloud: 95% already use AI at
-least weekly, but respondents are concentrated beginner-to-intermediate; ChatGPT is the dominant
-tool. The headline outcome on screen: AI for presentations and communication was the single
-most requested topic (13 of 21), and the top five all scored 9 or more.
--->
-
----
-layout: default
----
-
-# Shaped by your survey
-
-<p class="lead">The number-one request, in the number-one format: hands-on, AI-assisted presentations.</p>
+<p class="lead">Hands-on sessions on practical AI workflows, starting with presentations.</p>
 
 <div class="rm">
   <div class="rm-row rm-now"><span class="dot dot-now"></span><span class="rm-title">01 &middot; AI-Assisted Presentations with Slidev</span><span class="pill pill-now">Today</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">AI for Research Workflows &amp; Literature Synthesis</span><span class="pill">12 asked</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Data Analytics with AI</span><span class="pill">11 asked</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Workflow Automation with n8n &amp; AI Agents</span><span class="pill">9 asked</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Prompt Engineering for Reliable Outputs</span><span class="pill">9 asked</span></div>
+  <div class="rm-row"><span class="dot"></span><span class="rm-title">AI for Research Workflows &amp; Literature Synthesis</span><span class="pill">Planned</span></div>
+  <div class="rm-row"><span class="dot"></span><span class="rm-title">Data Analytics with AI</span><span class="pill">Planned</span></div>
+  <div class="rm-row"><span class="dot"></span><span class="rm-title">Workflow Automation with n8n &amp; AI Agents</span><span class="pill">Planned</span></div>
+  <div class="rm-row"><span class="dot"></span><span class="rm-title">Prompt Engineering for Reliable Outputs</span><span class="pill">Planned</span></div>
 </div>
 
 <style scoped>
@@ -119,10 +69,7 @@ layout: default
 </style>
 
 <!--
-The "so this exists, and there is more" slide. The series is shaped directly by the survey:
-this workshop is the #1 requested topic in the #1 preferred format. Upcoming topics map to the
-next-highest demand (research 12, data 11, automation 9, prompting 9). Presentations/Slidev
-is Hadi + Samuel A. Prieto. Further out: documentation, privacy, and coding sessions.
+The "so this exists, and there is more" slide. This workshop opens the series. Upcoming sessions cover research workflows, data analytics, workflow automation, and prompt engineering. Presentations and Slidev: Samuel A. Prieto + Hadi Zaatiti. Further out: documentation, privacy, and coding sessions.
 -->
 
 ---
@@ -1051,6 +998,6 @@ layout: end
 
 ::meta::
 
-Questions? Reach out to Hadi Zaatiti or Samuel A. Prieto.
+Questions? Reach out to Samuel A. Prieto or Hadi Zaatiti.
 
 Repo &nbsp;·&nbsp; [github.com/Hzaatiti/ai-upscaling](https://github.com/Hzaatiti/ai-upscaling)
