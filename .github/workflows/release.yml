@@ -1,0 +1,55 @@
+name: Release workshop archives
+
+# Cut a versioned archive of every workshop when you push a tag like v2026.09.
+# Attaches, per workshop, to the GitHub Release:
+#   <NN-slug>.pdf        the exported PDF
+#   <NN-slug>.pptx       the exported PowerPoint
+#   <NN-slug>-html.zip   an offline-openable copy of the interactive slides
+#
+# Usage:
+#   git tag v2026.09 && git push origin v2026.09
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # needed to create the Release and upload assets
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Install Playwright Chromium (for PDF and PPTX export)
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build release artifacts
+        run: node scripts/ci-build.mjs --mode release
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/*.pdf
+            release/*.pptx
+            release/*-html.zip
+          generate_release_notes: true

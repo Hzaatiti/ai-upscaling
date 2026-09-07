@@ -1,0 +1,216 @@
+/*
+ * Slide typography and rules, leans on the tokens in tokens.css.
+ * Faithful to the NYUAD design language:
+ *   - Display & H1 are SERIF (Source Serif 4).
+ *   - H2 is ALL-CAPS tracked sans (institutional section heads).
+ *   - Hairlines, not shadows; squared corners; no colored left-border accents.
+ */
+
+.slidev-layout {
+  font-family: var(--font-sans);
+  color: var(--fg1);
+  background: var(--bg1);
+  padding: var(--s-7) var(--s-8);
+  line-height: var(--lh-normal);
+  font-size: var(--t-body);
+}
+
+/* Headings, editorial serif for display ranks, sans for section labels. */
+.slidev-layout h1 {
+  font-family: var(--font-serif);
+  font-size: var(--t-h1);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: -0.005em;
+  color: var(--fg1);
+  margin-bottom: var(--s-4);
+  text-wrap: pretty;
+}
+
+.slidev-layout h2 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracked-sm);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+  margin-bottom: var(--s-3);
+}
+
+.slidev-layout h3 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h3);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+  margin-bottom: var(--s-2);
+}
+
+.slidev-layout h4 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h4);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+
+/* Body */
+.slidev-layout p { line-height: var(--lh-relaxed); text-wrap: pretty; }
+.slidev-layout ul, .slidev-layout ol { line-height: var(--lh-relaxed); }
+.slidev-layout ul li::marker { color: var(--nyu-violet); }
+.slidev-layout ol li::marker { color: var(--nyu-violet); font-weight: 700; }
+
+/* Lede, first paragraph after an h1 reads as editorial intro */
+.slidev-layout h1 + p {
+  font-family: var(--font-serif);
+  font-size: var(--t-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--fg1);
+}
+
+/* Links */
+.slidev-layout a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color var(--dur-fast) var(--ease-std),
+              text-decoration-thickness var(--dur-fast) var(--ease-std);
+}
+.slidev-layout a:hover {
+  color: var(--link-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Inline code */
+.slidev-layout code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: var(--r-1);
+  border: 1px solid var(--hairline);
+
+  /* Disable JetBrains Mono's programming ligatures inside code. They turn
+     "<--", "-->", "--" into arrow / em-dash glyphs, which is wrong when the
+     code is teaching literal syntax (HTML comments, shell flags, etc.).
+     Leave ligatures on for prose font (Inter), they're fine there. */
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0, "dlig" 0;
+}
+
+/* Code blocks, squared, hairline border, no shadow. */
+.slidev-layout pre {
+  border-radius: var(--r-2);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--sh-0);
+}
+.slidev-layout pre,
+.slidev-layout pre code {
+  /* Same ligature kill-switch on multi-line code blocks; rules on `code`
+     above don't reach `pre > span.line > span` etc. that Shiki produces. */
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0, "dlig" 0;
+}
+.slidev-layout pre code { border: 0; background: transparent; padding: 0; }
+.slidev-layout pre *,
+.slidev-layout code * {
+  /* Belt and suspenders: Shiki wraps each token in a <span>, which can have
+     its own font settings. Inherit the no-ligature rule explicitly. */
+  font-variant-ligatures: inherit;
+  font-feature-settings: inherit;
+}
+
+/* Block quotes, hairline left rule (the one place a left rule is permissible:
+   it carries quotation semantics, not decorative accent). */
+.slidev-layout blockquote {
+  border-left: 2px solid var(--nyu-violet);
+  background: transparent;
+  padding: 0 var(--s-4);
+  margin: var(--s-4) 0;
+  font-family: var(--font-serif);
+  color: var(--fg2);
+}
+
+/* Horizontal rules, the dominant separation device in this design language. */
+.slidev-layout hr {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: var(--s-5) 0;
+}
+
+/* Tables */
+.slidev-layout table {
+  border-collapse: collapse;
+  font-size: var(--t-small);
+  width: 100%;
+}
+.slidev-layout th,
+.slidev-layout td {
+  text-align: left;
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--hairline);
+}
+.slidev-layout th {
+  text-transform: uppercase;
+  letter-spacing: var(--tracked-sm);
+  font-size: var(--t-caption);
+  color: var(--fg2);
+  font-weight: 600;
+}
+
+/* Eyebrow utility, small all-caps tracked sans label */
+.eyebrow,
+.nyu-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracked);
+  color: var(--nyu-violet);
+}
+html.dark .nyu-eyebrow { color: var(--gold); }
+
+/* Tag/pill, used for status, audience hints. Pill radius is the ONE place
+   we deviate from squared corners, per the design system. */
+.nyu-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--t-caption);
+  font-weight: 600;
+  letter-spacing: var(--tracked-sm);
+  text-transform: uppercase;
+  padding: 0.2em 0.7em;
+  border-radius: var(--r-pill);
+  background: var(--nyu-violet);
+  color: var(--white);
+  border: 0;
+}
+.nyu-tag--accent {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.nyu-tag--ghost {
+  background: transparent;
+  color: var(--nyu-violet);
+  border: 1px solid var(--nyu-violet);
+}
+
+/* Callout (legacy class for plain-Markdown usage; the <NyuCallout> component
+   is preferred). Hairline only, no left-border accent, the design system
+   explicitly avoids colored left borders on cards. */
+.nyu-callout {
+  background: var(--bg2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-2);
+  padding: var(--s-4) var(--s-5);
+  margin: var(--s-3) 0;
+}
+
+/* Slidev 0.49 can leave the goto result list visible after the dialog closes. */
+#slidev-goto-dialog:not(.top-5) .autocomplete-list {
+  display: none;
+}

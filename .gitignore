@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Slidev build artifacts
+dist/
+.slidev/
+
+# CI publish artifacts (scripts/ci-build.mjs)
+release/
+.release-tmp/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Local environments
+*local*
+
+# FUSE leftover handles (mounted-folder artifact, safe to ignore)
+.fuse_hidden*
+
+# Slidev exports (regenerate with pnpm export:NN)
+slides-export.pdf
+slides-export.pptx
+slides-export*.png
