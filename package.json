@@ -14,7 +14,7 @@
     "preview:site": "node scripts/ci-build.mjs --mode pages --no-pdf --no-pptx",
     "build:release": "node scripts/ci-build.mjs --mode release"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=18"
   },
