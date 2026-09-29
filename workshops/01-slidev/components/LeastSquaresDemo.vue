@@ -259,7 +259,7 @@ function reset() {
   opacity: 0.85;
 }
 .lsq__fit {
-  stroke: var(--nyu-color-violet);
+  stroke: var(--accent-ink);
   stroke-width: 2.5;
   stroke-linecap: round;
 }
@@ -317,7 +317,7 @@ function reset() {
 }
 .lsq__btn--ghost {
   background: transparent;
-  color: var(--nyu-color-violet);
+  color: var(--accent-ink);
   border: 1px solid var(--border);
 }
 .lsq__btn--ghost:hover {

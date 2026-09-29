@@ -1,12 +1,12 @@
 ---
-# Workshop 01: AI-Assisted Presentations with Slidev: From Prompt to Polished Deck
+# AI-Assisted Presentations with Slidev: From Prompt to Polished Deck
 # This deck is itself made with Slidev, using the NYU theme. So the slides
 # you're watching are the lesson AND the demo.
 theme: nyu
 routerMode: hash
 title: "AI-Assisted Presentations with Slidev: From Prompt to Polished Deck"
 info: |
-  NYU Upscaling Workshop 01. AI-Assisted Presentations with Slidev: From Prompt to Polished Deck.
+  NYU workshop. AI-Assisted Presentations with Slidev: From Prompt to Polished Deck.
 
   Markdown-driven presentations: install, author, theme, and publish a
   deck end to end using the NYU slidev theme.
@@ -23,7 +23,7 @@ layout: cover
 # AI-Assisted Presentations with Slidev
 
 ::eyebrow::
-<span class="nyu-tag nyu-tag--accent">Workshop 01 · From Prompt to Polished Deck</span>
+<span class="nyu-tag nyu-tag--accent">From Prompt to Polished Deck</span>
 
 ::meta::
 Samuel A. Prieto · Hadi Zaatiti
@@ -37,40 +37,6 @@ Welcome people in. Mention the deck they're watching is itself a Slidev deck, so
 everything you see is achievable with the tools we'll teach in the next hour.
 -->
 
-
----
-layout: default
----
-
-# Part of a workshop series
-
-<p class="lead">Hands-on sessions on practical AI workflows, starting with presentations.</p>
-
-<div class="rm">
-  <div class="rm-row rm-now"><span class="dot dot-now"></span><span class="rm-title">01 &middot; AI-Assisted Presentations with Slidev</span><span class="pill pill-now">Today</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">AI for Research Workflows &amp; Literature Synthesis</span><span class="pill">Planned</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Data Analytics with AI</span><span class="pill">Planned</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Workflow Automation with n8n &amp; AI Agents</span><span class="pill">Planned</span></div>
-  <div class="rm-row"><span class="dot"></span><span class="rm-title">Prompt Engineering for Reliable Outputs</span><span class="pill">Planned</span></div>
-</div>
-
-<style scoped>
-.lead { font-family:var(--font-serif); font-size:var(--t-body-lg); color:var(--fg1); margin:0 0 14px; }
-.note { margin-top:14px; color:var(--fg2); font-size:14px; }
-.rm { display:flex; flex-direction:column; gap:8px; }
-.rm-row { display:flex; align-items:center; gap:14px; border:1px solid var(--hairline); border-radius:var(--r-2); padding:9px 18px; }
-.rm-now { background:var(--violet-050); border-color:var(--violet-200); }
-.dot { flex:none; width:10px; height:10px; border:2px solid var(--violet-300); background:transparent; }
-.dot-now { background:var(--nyu-violet); border-color:var(--nyu-violet); }
-.rm-title { flex:1; font-size:16px; color:var(--fg1); }
-.rm-now .rm-title { font-weight:700; }
-.pill { flex:none; font-family:var(--font-sans); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:var(--fg2); border:1px solid var(--hairline); border-radius:999px; padding:3px 10px; }
-.pill-now { background:var(--nyu-violet); color:var(--white); border-color:var(--nyu-violet); }
-</style>
-
-<!--
-The "so this exists, and there is more" slide. This workshop opens the series. Upcoming sessions cover research workflows, data analytics, workflow automation, and prompt engineering. Presentations and Slidev: Samuel A. Prieto + Hadi Zaatiti. Further out: documentation, privacy, and coding sessions.
--->
 
 ---
 layout: default
@@ -115,16 +81,16 @@ layout: default
 <style scoped>
 .agenda { display:flex; align-items:stretch; flex:1 1 auto; min-height:0; margin:16px 0 4px; }
 .ag-card { flex:1; display:flex; flex-direction:column; border:1px solid var(--hairline); border-radius:var(--r-2); padding:24px 30px; }
-.ag-card--watch { background:var(--violet-050); border-color:var(--violet-100); }
-.ag-card--build { background:var(--white); }
-.ag-eyebrow { font-family:var(--font-sans); font-size:var(--t-eyebrow); font-weight:600; text-transform:uppercase; letter-spacing:var(--tracked); color:var(--nyu-violet); }
+.ag-card--watch { background:var(--surface-violet); }
+.ag-card--build { background:var(--bg1); }
+.ag-eyebrow { font-family:var(--font-sans); font-size:var(--t-eyebrow); font-weight:600; text-transform:uppercase; letter-spacing:var(--tracked); color:var(--accent-ink); }
 .ag-title { font-family:var(--font-serif); font-size:40px; font-weight:700; line-height:var(--lh-tight); color:var(--fg1); margin-top:4px; }
 .ag-lede { font-family:var(--font-serif); font-size:var(--t-body-lg); color:var(--fg2); margin-top:10px; max-width:26ch; }
 .ag-list { list-style:none; padding:0; margin:18px 0 0; }
 .ag-list li { position:relative; padding-left:22px; font-size:17px; color:var(--fg1); line-height:1.85; }
-.ag-list li::before { content:""; position:absolute; left:0; top:0.72em; width:8px; height:8px; background:var(--nyu-violet); }
+.ag-list li::before { content:""; position:absolute; left:0; top:0.72em; width:8px; height:8px; background:var(--accent-ink); }
 .ag-foot { margin-top:auto; padding-top:16px; }
-.ag-chip { display:inline-block; font-family:var(--font-sans); font-size:var(--t-caption); font-weight:600; letter-spacing:var(--tracked-sm); text-transform:uppercase; padding:0.3em 0.85em; border-radius:var(--r-pill); border:1px solid var(--nyu-violet); color:var(--nyu-violet); }
+.ag-chip { display:inline-block; font-family:var(--font-sans); font-size:var(--t-caption); font-weight:600; letter-spacing:var(--tracked-sm); text-transform:uppercase; padding:0.3em 0.85em; border-radius:var(--r-pill); border:1px solid var(--accent-ink); color:var(--accent-ink); }
 .ag-chip--solid { background:var(--nyu-violet); color:var(--white); border-color:var(--nyu-violet); }
 .ag-arrow { display:flex; align-items:center; padding:0 20px; color:var(--violet-300); font-size:34px; flex:none; }
 </style>
@@ -179,10 +145,10 @@ layout: default
 <style scoped>
 .flow { display:flex; align-items:stretch; gap:16px; margin-top:48px; }
 .flow__step { flex:1; border:1px solid var(--hairline); border-radius:var(--r-2); padding:22px 24px; }
-.flow__step--last { border-color:var(--nyu-violet); }
-.flow__k { font-family:var(--font-sans); font-weight:700; text-transform:uppercase; letter-spacing:var(--tracked-sm); font-size:13px; color:var(--nyu-violet); margin-bottom:10px; }
+.flow__step--last { border-color:var(--accent-ink); }
+.flow__k { font-family:var(--font-sans); font-weight:700; text-transform:uppercase; letter-spacing:var(--tracked-sm); font-size:13px; color:var(--accent-ink); margin-bottom:10px; }
 .flow__v { font-size:15px; color:var(--fg2); line-height:var(--lh-snug); }
-.flow__arrow { display:flex; align-items:center; color:var(--ink-300); font-size:26px; }
+.flow__arrow { display:flex; align-items:center; color:var(--fg3); font-size:26px; }
 .lede { margin-top:40px; font-family:var(--font-serif); font-size:var(--t-body-lg); color:var(--fg1); }
 </style>
 
@@ -223,15 +189,15 @@ layout: default
 </div>
 
 <style scoped>
-.rung-cap { font-family:var(--font-sans); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:var(--tracked-sm); color:var(--ink-400); text-align:right; margin-bottom:10px; }
+.rung-cap { font-family:var(--font-sans); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:var(--tracked-sm); color:var(--fg3); text-align:right; margin-bottom:10px; }
 .ladder { display:flex; flex-direction:column; gap:12px; }
 .rung { display:flex; align-items:center; gap:22px; border:1px solid var(--hairline); border-radius:var(--r-2); padding:14px 20px; }
-.rung__n { font-family:var(--font-serif); font-weight:700; font-size:30px; color:var(--nyu-violet); width:30px; text-align:center; flex:none; }
+.rung__n { font-family:var(--font-serif); font-weight:700; font-size:30px; color:var(--accent-ink); width:30px; text-align:center; flex:none; }
 .rung__b { flex:1; }
 .rung__t { font-weight:600; font-size:18px; color:var(--fg1); }
 .rung__d { font-size:14px; color:var(--fg2); }
-.rung__bar { width:120px; height:6px; background:var(--ink-100); border-radius:var(--r-pill); flex:none; overflow:hidden; }
-.rung__bar span { display:block; height:100%; background:var(--nyu-violet); border-radius:var(--r-pill); }
+.rung__bar { width:120px; height:6px; background:var(--bg3); border-radius:var(--r-pill); flex:none; overflow:hidden; }
+.rung__bar span { display:block; height:100%; background:var(--accent-ink); border-radius:var(--r-pill); }
 </style>
 
 <!--
@@ -247,12 +213,12 @@ layout: default
 
 <span class="nyu-eyebrow">Raw material &rarr; a portable brief</span>
 
-Upload the AD Ports competition proposal PDF, then ask for a structured Markdown brief. Running this live:
+Upload your content as a PDF, then ask for a structured Markdown brief:
 
 ```text
 Turn the attached proposal PDF into a Markdown presentation brief.
 
-Audience: AD Ports Innovation Department.
+Audience: the innovation team and competition organizers.
 Goal: explain the competition workflow so they understand the
 technical steps, participant flow, robot roles, handoffs, scoring,
 and reliability plan.
@@ -264,10 +230,11 @@ one H2 heading per slide, 2-4 bullets per slide, speaker notes,
 suggested diagrams, and facts to verify before presenting.
 
 Source material:
-ADPorts_Humanoid_Competition_Edition2_Proposal_NB.pdf
+humanoid-competition-proposal.pdf
 ```
 
 <!--
+Use a prepared proposal with sponsor names, logos, and identifying details removed.
 Run this live in ChatGPT on the org account. The copy button on the code block makes it
 easy to grab. The output is a Markdown brief, which the next slide unpacks.
 -->
@@ -301,10 +268,10 @@ goal: get productive in the lab fast
 <p style="font-family:var(--font-serif);font-size:var(--t-body-lg);color:var(--fg2);margin:0 0 18px;">One plain-text file. Every tool downstream can read it.</p>
 
 <ul style="list-style:none;padding:0;margin:0;">
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--nyu-violet);"></span><span><strong style="color:var(--nyu-violet);font-weight:700;">Readable</strong>: humans scan it at a glance</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--nyu-violet);"></span><span><strong style="color:var(--nyu-violet);font-weight:700;">Editable</strong>: AI rewrites it precisely</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--nyu-violet);"></span><span><strong style="color:var(--nyu-violet);font-weight:700;">Portable</strong>: feeds Slidev, PowerPoint, PDF, Claude</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--nyu-violet);"></span><span><strong style="color:var(--nyu-violet);font-weight:700;">Versionable</strong>: diff and track it like code</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--accent-ink);"></span><span><strong style="color:var(--accent-ink);font-weight:700;">Readable</strong>: humans scan it at a glance</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--accent-ink);"></span><span><strong style="color:var(--accent-ink);font-weight:700;">Editable</strong>: AI rewrites it precisely</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--accent-ink);"></span><span><strong style="color:var(--accent-ink);font-weight:700;">Portable</strong>: feeds Slidev, PowerPoint, PDF, Claude</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:7px;background:var(--accent-ink);"></span><span><strong style="color:var(--accent-ink);font-weight:700;">Versionable</strong>: diff and track it like code</span></li>
 </ul>
 
 <!--
@@ -321,16 +288,16 @@ layout: two-cols-header
 ::left::
 
 <div style="display:flex; align-items:center; justify-content:center; height:100%;">
-  <img src="/img/claude.png" alt="Claude" style="max-width:82%; max-height:110px; object-fit:contain;" />
+  <img class="claude-logo" src="/img/claude.png" alt="Claude" style="max-width:82%; max-height:110px; object-fit:contain;" />
 </div>
 
 ::right::
 
 <ul style="list-style:none;padding:0;margin:0;">
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Prompt in, designed deck out</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Refine it by chatting</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>A real, editable artifact</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Export or keep iterating</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Prompt in, designed deck out</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Refine it by chatting</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>A real, editable artifact</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Export or keep iterating</span></li>
 </ul>
 
 <NyuCallout label="Live demo" tone="violet">
@@ -357,10 +324,10 @@ layout: two-cols-header
 ::right::
 
 <ul style="list-style:none;padding:0;margin:0;">
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Lives inside PowerPoint / Slides</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Stays in your required template</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Best for last-mile polish</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>No new tool to learn</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Lives inside PowerPoint / Slides</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Stays in your required template</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Best for last-mile polish</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>No new tool to learn</span></li>
 </ul>
 
 <NyuCallout label="Live demo" tone="violet">
@@ -387,10 +354,10 @@ layout: two-cols-header
 ::right::
 
 <ul style="list-style:none;padding:0;margin:0;">
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Edits your source files directly</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Runs the preview, iterates with you</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Changes structure, not just pixels</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Works because the deck is text</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Edits your source files directly</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Runs the preview, iterates with you</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Changes structure, not just pixels</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Works because the deck is text</span></li>
 </ul>
 
 <NyuCallout label="That is Part B" tone="accent">
@@ -436,8 +403,8 @@ layout: default
 .src-t1 { fill: var(--white); font-family: var(--font-mono); font-size: 17px; }
 .src-t2 { fill: var(--violet-100); font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.14em; }
 
-.out-box { fill: var(--white); stroke: var(--ink-200); stroke-width: 1; }
-.out-t   { fill: var(--ink-900); font-family: var(--font-sans); font-size: 15px; }
+.out-box { fill: var(--bg1); stroke: var(--hairline); stroke-width: 1; }
+.out-t   { fill: var(--fg1); font-family: var(--font-sans); font-size: 15px; }
 
 .line { fill: none; stroke: var(--violet-300); stroke-width: 2; stroke-dasharray: 560; stroke-dashoffset: 560; animation: hubDraw 0.6s ease forwards; }
 .src  { opacity: 0; animation: hubFade 0.5s ease forwards; }
@@ -467,7 +434,7 @@ layout: two-cols-header
 # AGENTS.md
 
 ## What this repo is
-Slidev decks for the NYU workshop series.
+An NYU workshop on AI-assisted presentations.
 
 ## Hard rules
 - Keep theme edits inside theme/.
@@ -483,10 +450,10 @@ pnpm dev:01
 <p style="font-family:var(--font-serif);font-size:var(--t-body-lg);color:var(--fg2);margin:0 0 18px;">A README for AI agents. Independent of the tool you use.</p>
 
 <ul style="list-style:none;padding:0;margin:0;">
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Codex, Cursor, Copilot, Aider all read it</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Conventions, commands, and guardrails in one place</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Point your agent here first</span></li>
-  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--nyu-violet);"></span><span>Codex picks it up automatically in this repo</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Codex, Cursor, Copilot, Aider all read it</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Conventions, commands, and guardrails in one place</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Point your agent here first</span></li>
+  <li style="display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:18px;line-height:1.5;color:var(--fg1);"><span style="flex:none;width:8px;height:8px;margin-top:8px;background:var(--accent-ink);"></span><span>Codex picks it up automatically in this repo</span></li>
 </ul>
 
 <!--
@@ -719,7 +686,7 @@ All workshop decks are hosted online. Push to `main` and a GitHub Action rebuild
 
 Live now:
 - [Landing page](https://hzaatiti.github.io/ai-upscaling/)
-- [Workshop 01](https://hzaatiti.github.io/ai-upscaling/01-slidev/)
+- [This workshop](https://hzaatiti.github.io/ai-upscaling/01-slidev/)
 
 ::right::
 
@@ -835,7 +802,7 @@ A slide is a web page, so it can embed live sites. This institutional page block
   margin: var(--s-5) 0 var(--s-5);
   padding: var(--s-6) var(--s-7);
   border: 1px solid var(--hairline);
-  border-left: 4px solid var(--nyu-color-violet);
+  border-left: 4px solid var(--accent-ink);
   border-radius: var(--r-3);
   background: var(--bg2);
   text-decoration: none;
@@ -848,7 +815,7 @@ A slide is a web page, so it can embed live sites. This institutional page block
   font-size: var(--t-eyebrow);
   letter-spacing: var(--tracked-sm);
   text-transform: uppercase;
-  color: var(--nyu-color-violet);
+  color: var(--accent-ink);
   font-weight: 700;
 }
 .nyu-site-card__title {
@@ -867,7 +834,7 @@ A slide is a web page, so it can embed live sites. This institutional page block
   margin-top: var(--s-3);
   font-family: var(--font-mono);
   font-size: var(--t-small);
-  color: var(--nyu-color-violet);
+  color: var(--accent-ink);
   word-break: break-all;
 }
 </style>

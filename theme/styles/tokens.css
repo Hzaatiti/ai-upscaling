@@ -68,6 +68,9 @@
   --bg3: var(--ink-100);
   --bg-inv: var(--nyu-violet);
   --bg-deep: var(--nyuad-deep-violet);
+  --surface-violet: var(--violet-050);
+  --surface-sand: var(--sand);
+  --accent-ink: var(--nyu-violet);
   --hairline: var(--ink-200);
   --border: var(--ink-300);
 
@@ -183,6 +186,9 @@ html.dark {
   --bg1: var(--violet-900);
   --bg2: var(--violet-800);
   --bg3: var(--violet-700);
+  --surface-violet: var(--violet-800);
+  --surface-sand: var(--violet-800);
+  --accent-ink: var(--violet-200);
   --hairline: var(--violet-700);
   --border: var(--violet-600);
   --link: var(--gold);

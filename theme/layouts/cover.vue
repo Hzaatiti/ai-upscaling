@@ -18,7 +18,7 @@
     <div class="nyu-cover__content">
       <div class="nyu-cover__eyebrow">
         <slot name="eyebrow">
-          <span class="nyu-tag">NYU Upscaling Workshops</span>
+          <span class="nyu-tag">NYU Workshop</span>
         </slot>
       </div>
 

@@ -76,7 +76,7 @@ The scaffold script (`scripts/new-workshop.mjs`) **aborts early** if `theme/` is
 These are non-negotiable unless you have a strong reason and the user has agreed:
 
 1. **Keep theme changes and deck changes cleanly separated in intent.** Theme-level changes (colors, layouts, components used by more than one deck) go in `theme/`. Per-deck overrides go in `workshops/NN-name/style.css` or that deck's `components/`. Don't push workshop-specific styling into the theme.
-2. **Don't duplicate brand assets.** The canonical logo lives at `theme/public/brand/nyuad-logo.png`. The scaffold script copies it into each workshop's `public/brand/`, that is the only intended mirror (Slidev needs it in the deck's `public/` to serve at `/brand/*`).
+2. **Don't duplicate brand assets.** The canonical logo lives at `theme/public/brand/nyuad-logo.svg`. The scaffold script copies it into each workshop's `public/brand/`, that is the only intended mirror (Slidev needs it in the deck's `public/` to serve at `/brand/*`).
 3. **Don't commit `node_modules/`, `dist/`, `release/`, `slides-export.pdf`, or any build artifacts.** The `.gitignore` already covers these; if you find yourself adding one, ask why.
 4. **Don't break the `workshops/NN-name/` naming convention.** The scaffold script, `ci-build.mjs` auto-discovery, and shortcut aliases (`dev:01`, etc.) depend on it.
 5. **Workshop folders use `file:../../theme`, never `workspace:*` or `link:`.** The theme isn't a workspace package (so `workspace:*` won't resolve), and `link:` is a pnpm-only protocol that npm rejects with `EUNSUPPORTEDPROTOCOL`. `file:` symlinks correctly under both tools.
@@ -177,3 +177,11 @@ The workshop site is published to GitHub Pages automatically. Key facts for agen
 - [`workshops/AGENTS.md`](workshops/AGENTS.md), slide-authoring conventions, frontmatter, layouts, snippets, fit-to-canvas rules.
 - [`theme/README.md`](theme/README.md), theme reference: layouts, components, tokens, design rules.
 - [`scripts/new-workshop.mjs`](scripts/new-workshop.mjs), read this if you need to change how workshops are scaffolded.
+
+### Canvas and logo rendering
+
+Keep the shared `.slidev-layout` height at 100% with border-box sizing. A closing
+layout sized only to its content leaves an unpainted strip below it. The official
+SVG logo is rendered as an alpha mask; do not filter the old opaque PNG to white,
+which turns its torch square into a solid block. Copy the SVG through the scaffold
+script when adding a workshop.

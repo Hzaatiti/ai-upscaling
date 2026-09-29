@@ -18,7 +18,7 @@
  *                          in-repo theme/ package)
  *        - slides.md      (minimal cover + outline + one section + end)
  *        - README.md      (run instructions)
- *        - public/brand/  (nyuad-logo.png copied so /brand/* resolves)
+ *        - public/brand/  (nyuad-logo.svg copied so /brand/* resolves)
  *        - components/, snippets/, exercises/ (with .gitkeep / README)
  *   3. Prints the next two commands to run.
  *
@@ -106,11 +106,11 @@ mkdirSync(join(targetDir, 'public', 'brand'), { recursive: true })
 mkdirSync(join(targetDir, 'public', 'img'), { recursive: true })
 mkdirSync(join(targetDir, 'exercises'), { recursive: true })
 
-// Copy the brand asset so /brand/nyuad-logo.png resolves at build time. Source
+// Copy the brand asset so /brand/nyuad-logo.svg resolves at build time. Source
 // is the canonical copy inside the theme package.
-const brandSrc = join(THEME_DIR, 'public', 'brand', 'nyuad-logo.png')
+const brandSrc = join(THEME_DIR, 'public', 'brand', 'nyuad-logo.svg')
 if (existsSync(brandSrc)) {
-  cpSync(brandSrc, join(targetDir, 'public', 'brand', 'nyuad-logo.png'))
+  cpSync(brandSrc, join(targetDir, 'public', 'brand', 'nyuad-logo.svg'))
 } else {
   console.warn(`Warning: brand asset not found at ${brandSrc}; skipping logo copy.`)
 }

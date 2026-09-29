@@ -105,7 +105,7 @@ theme: nyu
 ### Images
 
 - Workshop-specific images: `workshops/NN-name/public/img/`. Reference as `/img/foo.png` in slides.
-- Brand assets (logo): `public/brand/nyuad-logo.png` is auto-copied by the scaffold script; use `<NyuLogo />` rather than referencing the file directly.
+- Brand assets (logo): `public/brand/nyuad-logo.svg` is auto-copied by the scaffold script; use `<NyuLogo />` rather than referencing the file directly.
 - Don't store images in `slides.md` as base64, they bloat the file.
 
 ### Layouts
