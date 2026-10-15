@@ -622,14 +622,14 @@ layout: two-cols-header
 
 # Start your own deck from this repo
 
-After the manual setup above works once, **this repo** ships a scaffold script so you never repeat those steps. Clone [`ai-upscaling`](https://github.com/Hzaatiti/ai-upscaling) once, then:
+After the manual setup above works once, **this repo** ships a scaffold script so you never repeat those steps. Clone [`nyuad-ai-workshops`](https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops) once, then:
 
 ::left::
 
 ### Scaffold
 
 ```bash
-cd ai-upscaling
+cd nyuad-ai-workshops
 pnpm install         # one-time
 pnpm new-workshop my-talk
 ```
@@ -685,8 +685,10 @@ All workshop decks are hosted online. Push to `main` and a GitHub Action rebuild
 - Each deck is live at `/<NN-slug>/`, with PDF and PowerPoint downloads beside it.
 
 Live now:
-- [Landing page](https://hzaatiti.github.io/ai-upscaling/)
-- [This workshop](https://hzaatiti.github.io/ai-upscaling/01-slidev/)
+
+- [Landing page](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/)
+- [Workshop 01](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/01-slidev/)
+
 
 ::right::
 
@@ -719,7 +721,7 @@ Your deck links the theme via `file:../../theme`, a **symlink** not a copy, so y
 ### To get the latest theme
 
 ```bash
-cd /path/to/ai-upscaling
+cd /path/to/nyuad-ai-workshops
 git pull
 ```
 
@@ -728,7 +730,7 @@ The next browser reload (or `npx slidev build` / `export`) picks up the changes.
 ::right::
 
 ### Where it applies
-- **Locally:** edit anything in [`theme/`](https://github.com/Hzaatiti/ai-upscaling/tree/main/theme), every deck reflects it on the next reload.
+- **Locally:** edit anything in [`theme/`](https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops/tree/main/theme), every deck reflects it on the next reload.
 - **Online:** pushing a theme change to `main` triggers an automatic rebuild and republish.
 
 <NyuCallout label="Check after a theme change" tone="sand">
@@ -857,7 +859,7 @@ layout: two-cols-header
 
 ::left::
 
-A [Mermaid](https://mermaid.js.org) diagram, rendered straight from the Markdown. The violet **Live site** node is a live link to [hzaatiti.github.io/ai-upscaling](https://hzaatiti.github.io/ai-upscaling/).
+A [Mermaid](https://mermaid.js.org) diagram, rendered straight from the Markdown. The violet **Live site** node is a live link to [nyuad-core-technology-platforms.github.io/nyuad-ai-workshops](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/).
 
 ```mermaid {scale: 0.6}
 flowchart TD
@@ -865,7 +867,7 @@ flowchart TD
   B --> X[Exports PDF and PPTX]
   X --> D[Deploys to GitHub Pages]
   D --> L([Live site]):::portal
-  click L "https://hzaatiti.github.io/ai-upscaling/" "Open the published workshop site" _blank
+  click L "https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/" "Open the published workshop site" _blank
   classDef portal fill:#57068c,stroke:#330662,color:#ffffff,font-weight:bold;
 ```
 
@@ -967,4 +969,4 @@ layout: end
 
 Questions? Reach out to Samuel A. Prieto or Hadi Zaatiti.
 
-Repo &nbsp;·&nbsp; [github.com/Hzaatiti/ai-upscaling](https://github.com/Hzaatiti/ai-upscaling)
+Repo &nbsp;·&nbsp; [github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops](https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops)

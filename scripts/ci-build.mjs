@@ -297,7 +297,7 @@ function landingPage(cards) {
 ${items}
     </ul>
   </main>
-  <footer class="wrap">Built from the <a href="https://github.com/Hzaatiti/ai-upscaling" style="color:inherit">ai-upscaling</a> repo. Last published automatically on push to main.</footer>
+  <footer class="wrap">Built from the <a href="https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops" style="color:inherit">nyuad-ai-workshops</a> repo. Last published automatically on push to main.</footer>
 </body>
 </html>
 `

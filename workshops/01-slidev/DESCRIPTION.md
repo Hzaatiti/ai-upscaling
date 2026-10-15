@@ -69,8 +69,8 @@ Node.js should report version 18 or newer. If your distribution provides an olde
 Run these commands on Windows, macOS, or Linux:
 
 ```bash
-git clone https://github.com/Hzaatiti/ai-upscaling.git
-cd ai-upscaling
+git clone https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops.git
+cd nyuad-ai-workshops
 pnpm install
 pnpm dev:01
 ```

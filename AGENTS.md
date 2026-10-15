@@ -2,7 +2,7 @@
 
 Guidance for AI coding agents working in this repo. Read this first when you start a task here, it captures conventions, file boundaries, and gotchas that aren't obvious from the file tree alone.
 
-Repo URL: `github.com/Hzaatiti/ai-upscaling`.
+Repo URL: `github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops`.
 
 ---
 
@@ -112,7 +112,7 @@ These are non-negotiable unless you have a strong reason and the user has agreed
 
 - **Preview locally:** `npx serve workshops/NN-name/dist`, prints a URL, open that.
 - **Build with relative paths:** add `-- --base ./` to the build command.
-- **Build for a specific path:** add `-- --base /subdir/` (e.g. `--base /ai-upscaling/01-slidev/` for GitHub Pages).
+- **Build for a specific path:** add `-- --base /subdir/` (e.g. `--base /nyuad-ai-workshops/01-slidev/` for GitHub Pages).
 
 ### npm doesn't understand `workspace:*` or `link:`
 
@@ -166,7 +166,7 @@ The workshop site is published to GitHub Pages automatically. Key facts for agen
 - pnpm version is pinned in the workflows (`version: 9`).
 - Decks must set `routerMode: hash` in headmatter. GitHub Pages has no per-folder 404 fallback, so history-mode deep links (e.g. `/01-slidev/2`) return 404 on refresh; hash mode keeps the slide index after `#`. The `new-workshop` scaffold sets this automatically.
 - One-time setup on GitHub: Settings > Pages > Source = GitHub Actions.
-- Live site: https://hzaatiti.github.io/ai-upscaling/
+- Live site: https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/
 
 ---
 

@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: pnpm }
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter ./workshops/01-slidev build --base /ai-upscaling/01/
+      - run: pnpm --filter ./workshops/01-slidev build --base /nyuad-ai-workshops/01-slidev/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: workshops/01-slidev/dist
