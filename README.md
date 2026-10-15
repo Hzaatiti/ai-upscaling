@@ -128,7 +128,7 @@ What the script does step by step:
 2. Creates `workshops/NN-<slug>/` with:
    - `package.json` already pointing at the in-repo theme via `file:../../theme`.
    - A minimal `slides.md`, cover + outline + one section + end. Replace with your content.
-   - `public/brand/nyuad-logo.png` copied from `theme/public/brand/` so `<NyuLogo />` resolves.
+   - `public/brand/nyuad-logo.svg` copied from `theme/public/brand/` so `<NyuLogo />` resolves.
    - `snippets/`, `components/`, `public/img/`, `exercises/` scaffolded with placeholders.
    - A short `README.md` for the workshop.
 3. Prints the next two commands to run.

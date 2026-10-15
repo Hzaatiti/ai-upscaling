@@ -7,6 +7,10 @@
  */
 
 .slidev-layout {
+  /* Every layout fills the fixed Slidev canvas, including sparse covers/endings. */
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
   font-family: var(--font-sans);
   color: var(--fg1);
   background: var(--bg1);
@@ -58,8 +62,8 @@
 /* Body */
 .slidev-layout p { line-height: var(--lh-relaxed); text-wrap: pretty; }
 .slidev-layout ul, .slidev-layout ol { line-height: var(--lh-relaxed); }
-.slidev-layout ul li::marker { color: var(--nyu-violet); }
-.slidev-layout ol li::marker { color: var(--nyu-violet); font-weight: 700; }
+.slidev-layout ul li::marker { color: var(--accent-ink); }
+.slidev-layout ol li::marker { color: var(--accent-ink); font-weight: 700; }
 
 /* Lede, first paragraph after an h1 reads as editorial intro */
 .slidev-layout h1 + p {
@@ -125,7 +129,7 @@
 /* Block quotes, hairline left rule (the one place a left rule is permissible:
    it carries quotation semantics, not decorative accent). */
 .slidev-layout blockquote {
-  border-left: 2px solid var(--nyu-violet);
+  border-left: 2px solid var(--accent-ink);
   background: transparent;
   padding: 0 var(--s-4);
   margin: var(--s-4) 0;
@@ -169,7 +173,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--tracked);
-  color: var(--nyu-violet);
+  color: var(--accent-ink);
 }
 html.dark .nyu-eyebrow { color: var(--gold); }
 
@@ -195,8 +199,8 @@ html.dark .nyu-eyebrow { color: var(--gold); }
 }
 .nyu-tag--ghost {
   background: transparent;
-  color: var(--nyu-violet);
-  border: 1px solid var(--nyu-violet);
+  color: var(--accent-ink);
+  border: 1px solid var(--accent-ink);
 }
 
 /* Callout (legacy class for plain-Markdown usage; the <NyuCallout> component

@@ -1,21 +1,17 @@
 <!--
-  NyuLogo, official NYUAD lockup.
-  Uses the real PNG asset from the design system. For dark backgrounds, the
-  `white` prop applies `brightness(0) invert(1)` so the violet logo reads as
-  white, matching the design-system guidance.
-
-  An optional wordmark line is rendered as small all-caps tracked sans
-  underneath, per the eyebrow type style.
+  Official NYUAD SVG lockup, used unchanged as an alpha mask.
+  Color the original silhouette violet on light surfaces and white on dark
+  surfaces. The transparent torch remains visible inside its surrounding box.
 -->
 <template>
   <div class="nyu-logo" :class="{ 'nyu-logo--white': white }">
-    <img
+    <span
       class="nyu-logo__img"
-      :src="resolvedSrc"
-      alt="NYU Abu Dhabi"
-      :style="white ? 'filter: brightness(0) invert(1);' : ''"
+      role="img"
+      aria-label="NYU Abu Dhabi"
+      :style="{ maskImage: `url(${resolvedSrc})`, WebkitMaskImage: `url(${resolvedSrc})` }"
     />
-    <div class="nyu-logo__sub" v-if="!minimal">Upscaling Workshop Series</div>
+    <div class="nyu-logo__sub" v-if="!minimal">NYU Workshop</div>
   </div>
 </template>
 
@@ -30,7 +26,7 @@ const props = withDefaults(defineProps<{
   /** Override the logo path. Default points to the bundled brand asset. */
   src?: string
 }>(), {
-  src: 'brand/nyuad-logo.png',
+  src: 'brand/nyuad-logo.svg',
 })
 
 // Prefix Vite's base URL so the asset resolves whether the deck is served at
@@ -55,8 +51,15 @@ const resolvedSrc = computed(() => {
 
 .nyu-logo__img {
   height: 32px;
-  width: auto;
+  aspect-ratio: 277.4 / 69.6;
   display: block;
+  background-color: var(--nyu-logo-color, var(--nyu-violet));
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .nyu-logo__sub {
@@ -67,6 +70,9 @@ const resolvedSrc = computed(() => {
   letter-spacing: var(--tracked);
   color: var(--fg2);
 }
+
+.nyu-logo--white,
+:global(html.dark .nyu-logo) { --nyu-logo-color: var(--white); }
 
 .nyu-logo--white .nyu-logo__sub { color: var(--violet-200); }
 </style>

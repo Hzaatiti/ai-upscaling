@@ -89,5 +89,19 @@ theme/
 ├── components/           # NyuCallout, NyuFooter, NyuKbd, NyuLogo, AutoFit
 ├── styles/               # index.ts -> tokens.css + layout.css
 ├── setup/main.ts         # Slidev app setup hook (kept minimal)
-└── public/brand/         # nyuad-logo.png
+└── public/brand/         # nyuad-logo.svg
 ```
+
+## Official logo and dark surfaces
+
+`public/brand/nyuad-logo.svg` is the unmodified bilingual logo from the
+[NYUAD website](https://nyuad.nyu.edu/apps/nyuad/docroot/icons/nyuad-logo-white.svg),
+retrieved 2026-09-29. This mark has no vertical separator between NYU and Abu Dhabi.
+`NyuLogo` uses its alpha channel as a CSS mask, preserving the torch cutout, and
+colors it violet on light surfaces or white on dark surfaces. The workshop copy
+is the same file; the scaffold script copies this asset for new decks.
+
+Use `--surface-violet`, `--surface-sand`, and `--accent-ink` for surfaces and small
+labels that must adapt to dark mode. Keep white text with solid violet buttons.
+All `.slidev-layout` containers fill the slide canvas so sparse closing slides
+do not leave an unpainted strip below the content.

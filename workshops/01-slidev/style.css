@@ -1,4 +1,7 @@
 /* Workshop 01, deck-local CSS overrides. Slidev auto-loads this file.
-   Use it for tweaks that should apply to THIS deck only (e.g. override a brand
-   token for a guest co-presenter). Intentionally empty right now; shared rules
-   live in the theme (theme/styles/). */
+   Shared rules live in theme/styles/. */
+
+/* Use a white monochrome logo on dark backgrounds without changing its shape. */
+html.dark .claude-logo {
+  filter: brightness(0) invert(1);
+}

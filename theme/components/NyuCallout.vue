@@ -34,7 +34,7 @@ withDefaults(defineProps<{
 }
 
 .nyu-callout--sand {
-  background: var(--sand);
+  background: var(--surface-sand);
   border-color: rgba(201, 154, 30, 0.25);
 }
 
@@ -42,12 +42,12 @@ withDefaults(defineProps<{
   margin-bottom: var(--s-2);
 }
 .nyu-callout--accent .nyu-callout__label { color: var(--gold); }
-.nyu-callout--sand   .nyu-callout__label { color: var(--ink-700); }
+.nyu-callout--sand   .nyu-callout__label { color: var(--accent-ink); }
 
 .nyu-callout__body {
   font-size: var(--t-body);
   color: var(--fg1);
 }
 .nyu-callout__body :deep(p:last-child) { margin-bottom: 0; }
-.nyu-callout__body :deep(code) { background: var(--white); }
+.nyu-callout__body :deep(code) { background: var(--bg1); }
 </style>
