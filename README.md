@@ -73,8 +73,8 @@ That's it. The theme ships inside the repo, so there is nothing else to clone.
 ## First time you clone this repo
 
 ```bash
-git clone https://github.com/Hzaatiti/ai-upscaling.git
-cd ai-upscaling
+git clone https://github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops.git
+cd nyuad-ai-workshops
 pnpm install
 ```
 
@@ -253,14 +253,14 @@ There are also shorthand aliases in the root `package.json` for workshop 01: `pn
 
 ## Publish all decks (GitHub Pages + Releases)
 
-**Live site: https://hzaatiti.github.io/ai-upscaling/**, landing page with every workshop; each deck lives at `.../<NN-slug>/` with `slides.pdf` and `slides.pptx` beside it.
+**Live site: https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/**, landing page with every workshop; each deck lives at `.../<NN-slug>/` with `slides.pdf` and `slides.pptx` beside it.
 
 Two GitHub Actions workflows publish every workshop automatically. They live in `.github/workflows/` and both build through `scripts/ci-build.mjs`, which auto-discovers every `workshops/NN-*` folder, you never edit the workflow when you add a workshop.
 
 **`deploy-pages.yml`, on every push to `main`.** Builds the combined site and deploys it to GitHub Pages:
 
 - Landing page at the site root listing every workshop.
-- Each deck served at `https://hzaatiti.github.io/ai-upscaling/<NN-slug>/` (correct `--base` set automatically).
+- Each deck served at `https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/<NN-slug>/` (correct `--base` set automatically).
 - Downloadable `slides.pdf` and `slides.pptx` beside each deck, plus a `404.html` fallback so deep-link refreshes don't break.
 
 **`release.yml`, on a version tag (`v*`).** Builds a versioned archive and attaches it to a GitHub Release: per workshop, `<NN-slug>.pdf`, `<NN-slug>.pptx`, and `<NN-slug>-html.zip` (an offline-openable copy of the slides, built with `--base ./`). Cut one with:
@@ -313,9 +313,9 @@ If you've already given workshop 01 and don't want a future theme change to alte
 
 | # | Title | Status | Links |
 |---|-------|--------|-------|
-| 01 | AI-Assisted Presentations with Slidev: From Prompt to Polished Deck | Draft | [slides](https://hzaatiti.github.io/ai-upscaling/01-slidev/) · [PDF](https://hzaatiti.github.io/ai-upscaling/01-slidev/slides.pdf) · [PPTX](https://hzaatiti.github.io/ai-upscaling/01-slidev/slides.pptx) |
+| 01 | AI-Assisted Presentations with Slidev: From Prompt to Polished Deck | Draft | [slides](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/01-slidev/) · [PDF](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/01-slidev/slides.pdf) · [PPTX](https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/01-slidev/slides.pptx) |
 
-When you add a new workshop, add it to this table. Its links follow the pattern `https://hzaatiti.github.io/ai-upscaling/<NN-slug>/` (live slides), `.../<NN-slug>/slides.pdf` (PDF), and `.../<NN-slug>/slides.pptx` (PowerPoint).
+When you add a new workshop, add it to this table. Its links follow the pattern `https://nyuad-core-technology-platforms.github.io/nyuad-ai-workshops/<NN-slug>/` (live slides), `.../<NN-slug>/slides.pdf` (PDF), and `.../<NN-slug>/slides.pptx` (PowerPoint).
 
 ---
 

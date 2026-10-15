@@ -144,5 +144,5 @@ layout: end
 # Thanks!
 
 ::meta::
-Repo: github.com/Hzaatiti/ai-upscaling
+Repo: github.com/NYUAD-Core-Technology-Platforms/nyuad-ai-workshops
 Maintainers: Hadi Zaatiti and Samuel A. Prieto
